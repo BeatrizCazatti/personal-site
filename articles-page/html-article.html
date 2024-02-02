@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-articles.css">
+    <title>HTML</title>
+</head>
+<body>
+    <header class="container">
+        <div class="mid header">
+            <div class="profile">
+                <img src="../images/perfil.jpg" alt="foto de Beatriz Cazatti">
+                <p>Beatriz Cazatti Figueiredo</p>
+            </div>
+            <div class="search">
+                <input type="text" name="search" id="" placeholder="O que você quer aprender?">
+            </div>
+        </div>
+    </header>
+    <navbar class="container">
+        <div class="mid navbar-technologies">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Git</li>
+                <li>Bootstrap</li>
+                <li>JavaScript</li>
+                <li>JQuery</li>
+                <li>NodeJS</li>
+                <li>ReactJS</li>
+                <li>Jest</li>
+                <li>MySQL</li>
+                <li>Estrutura de Dados</li>
+            </ul>
+        </div>
+    </navbar>
+    <section class="container">
+        <div class="home mid">
+            <div class="text-home">
+                <h3>artigo_</h3>
+                <h1>HTML: HyperText Markup Language</h1>
+                <p>Que significa: "Linguagem de Marcação de Hipertexto“, utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores. A tecnologia é fruto da junção entre os padrões HyTime e SGML.
+                </p>
+            </div>
+            <div class="logo">
+                <img src="../images/technologies/html.png" alt="">
+            </div>
+        </div>
+    </section>
+    <content class="container">
+        <div class="content mid">
+            <div class="navegation">
+                <ul>
+                    <li>
+                        <div></div>
+                        <p>Definição</p>
+                    </li>
+                    <li>
+                        <span></span>
+                        <p>Estrutura</p>
+                    </li>
+                    <li>
+                        <span></span>
+                        <p>Semântica</p>
+                    </li>
+                    <li>
+                        <span></span>
+                        <p>Textos</p>
+                    </li>
+                    <li>
+                        <span></span>
+                        <p>Links</p>
+                    </li>
+                    <li>
+                        <span></span>
+                        <p>Tipos de input</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-article">
+                <h2>Definição e História</h2>
+                <p>
+                    Em 1991 Tim Berners-Lee criou essa linguagem de marcação para melhorar a comunicação entre ele e seus colegas de trabalho no CERN, desde então já surgiram 5 versões e o HTML se tornou a base da web.
+                </p>
+                <p>
+                    Com o HTML definimos o significado e a estrutura do conteúdo da web e, além de texto, nossas páginas precisam de imagens, vídeos e vários outros formatos e para isso temos os elementos HTML.
+                </p>
+                <p>
+                    Um elemento HTML é formado pela tag de abertura e seus atributos, o conteúdo e uma tag de fechamento. E mais a frente veremos que existem elementos que não tem tag de fechamento.
+                </p>
+                <p>
+                    Com esses elementos podemos agrupar tipos de conteúdo, alterar tamanho e forma de fontes e adicionar diferentes mídias ao nossa página na web.
+                </p>
+
+                <h2>Estrutura Básica</h2>
+               <p>
+                   A primeira linha do documento deve ser o &lt;!DOCTYPE html&lt;, apesar de parecer um elemento HTML ela apenas diz ao navegador que ele está lidando com um arquivo do tipo HTML5. Os elementos HTML vem logo   abaixo.
+                </p>
+                <p>
+                    A tag html é a raiz do seu documento, todos os elementos HTML devem estar dentro dela. E nela nós informamos ao navegador qual é o idioma desse nosso documento, através do atributo lang, para o português brasileiro usamos pt-BR.
+                </p>
+                &lt;head&lt;
+
+                <p>
+                    A tag head contém elementos que serão lidos pelo navegador, como os metadados - um exemplo é o charset, que é a codificação de caracteres e a mais comum é a UTF-8, o JavaScript com a tag script, o CSS através das tags style e link - veremos a diferença quando falarmos sobre CSS - e o título da página com a tag title.
+                </p>
+
+                &lt;body&lt;
+
+                E dentro da tag body colocamos todo o conteúdo visível ao usuário: textos, imagens, vídeos.</p>
+                
+
+                <h2>Semântica</h2>
+                <p>Durante muitos anos o elemento padrão no HTML era a div, construíamos nosso conteúdo todo baseado nela, e assim nascia a sopa de divs.
+                <br>
+                Mas em 2014 saiu a quinta versão do HTML, e com ela vieram vários mudanças importantes, como performance e acessibilidade, mas nesse curso introdutório vamos focar na semântica.
+                <br>
+                A semântica nos permite descrever mais precisamente o nosso conteúdo, agora um bloco de texto não é apenas uma div, agora é um article e tem mais significado assim. E temos vários elementos para ressignificar as divs:
+                <br>
+                &lt;section&lt;
+                <br>
+                Representa uma seção genérica de conteúdo quando não houver um elemento mais específico para isso.
+                <br>
+                &lt;header&lt;
+                <br>
+                É o cabeçalho da página ou de uma seção da página e normalmente contém logotipos, menus, campos de busca.
+                <br>
+                &lt;article&lt;
+                <br>
+                Representa um conteúdo independente e de maior relevância dentro de uma página, como um post de blog, uma notícia em uma barra lateral ou um bloco de comentários. Um article pode conter outros elementos, como header, cabeçalhos, parágrafos e imagens.
+                <br>
+                &lt;aside&lt;
+                <br>
+                É uma seção que engloba conteúdos relacionados ao conteúdo principal, como artigos relacionados, biografia do autor e publicidade. Normalmente são representadas como barras laterais.
+                
+                &lt;footer&lt;
+                
+                Esse elemento representa o rodapé do conteúdo ou de parte dele, pois ele é aceito dentro de vários elementos, como article e section e até do body. Exemplos de conteúdo de um &lt;footer&lt; são informações de autor e *links* relacionados.
+                
+                &lt;h1&lt;-&lt;h6&lt;
+                
+                Eles não foram criados na versão 5 do HTML e nem são específicos para semântica, mas servem para esse propósito. São utilizados para marcar a importância dos títulos, sendo &lt;h1&lt; o mais importante e &lt;h6&lt; o menos. Uma dica: use apenas um <h1> por página, pois ele representa o objetivo da sua página.</p>
+                    
+                <h2>Textos</h2>
+                <p>A criação do HTML foi motivada pela necessidade de compartilhar textos e documentos, e mesmo depois de quase 30 anos, com toda a evolução da web, isso ainda representa uma boa parte do conteúdo da web.
+
+                Já falamos anteriormente sobre os elementos h1-h6 e, eles são essenciais para nos indicar visualmente a importância e localização de seções de texto na página, mas para textos maiores e mais densos usamos o elemento p.
+                
+                O &lt;p&lt; representa um parágrafo, mas ele não suporta apenas texto, podemos adicionar imagens, código, vídeos e vários outros tipos de conteúdo dentro dele.</p>
+
+                <h2>Links</h2>
+                <p>Um outro elemento interessante e extremamente necessário na web é o &lt;a&lt; - que significa anchor/âncora, ele representa um hyperlink, é ele que interliga vários conteúdos e páginas na web.
+
+                O elemento a tem vários atributos, mas vamos focar em dois, o href e o target.
+                
+                O href representa o *hyperlink* para onde sua âncora aponta, pode ser uma página do seu ou de outro site, um e-mail e até mesmo um telefone, os dois últimos precisam dos prefixos mailto: e tel:, respectivamente.
+                
+                O target neste momento vai servir para nos ajudar a abrir nossos links em outra aba do navegador usando o valor _blank.</p>
+            </div>
+        </div>
+    </content>
+</body>
+</html>

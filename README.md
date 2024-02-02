@@ -1,2 +1,2 @@
 # personal-site
-⭐Site pessoal, com meu currículo, projetos e artigos que tenho.
+⭐Meu site pessoal, com meu curriculo, projetos e artigos que tenho.

@@ -1,0 +1,314 @@
+/**RESPONSIVIDADE**/
+@media (max-width: 1400px) {
+    .about-1{
+        height: 300px;
+        width: 150px;
+        left: 0;
+        bottom: 250px;
+        border-radius: 0 600px 600px 0;
+        box-shadow: 0 0 0 60px #FFF;
+        position: absolute;
+        z-index: 1;
+        border: none;
+    }
+    .about-2 {
+        left: 440px;
+    }
+    #projects {
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        height: 800px;
+        padding: 0;
+    }
+    #projects .text-behind {
+        right: 0;
+    }
+    #projects .images-projects {
+        width: 100%;
+    }
+    .project .image {
+        width: 230px;
+        height: 230px;
+        z-index: 4;
+    }
+}
+@media (max-width: 1350px) {
+    .background-white{
+        flex-direction: column;
+        height: 810px;
+    }
+    #skills {
+        padding: 250px 0 0 0;
+        height: 700px;
+    }
+    .resume-about {
+        height: 85%;
+        padding: 25px;
+        width: 90%;
+    }
+    .project .image .description ul, .description .github-link{
+        display: none;
+    }
+    .description .open-tab {
+        font-size: 11px;
+        font-weight: normal;
+    }
+    #training {
+        padding: 0 5.5% 0 2%;
+        height: 900px;
+    }
+    section #training {
+        align-items: flex-start;
+    }
+    #training .text-training{
+        width: 40%;
+    }
+    
+}
+@media (max-width: 1024px) {
+    .header {
+        padding: 50px
+    }
+    #home-page {
+        padding: 8%;
+    }
+    #about {
+        padding: 2% 0 2% 0;
+    }
+    .resume-about {
+        height: 93%;   
+    }
+    .project .image {
+        width: 180px;
+        height: 180px;
+    }
+    .description {
+        padding:8px 4px;
+    }
+    .project h1 {
+        font-size: 15px;
+    }
+}
+@media (max-width: 940px) {
+    section {
+        flex-direction: column;
+    }
+    #home-page {
+        height: 700px;
+        padding: 150px;
+    }
+    #skills .text-behind {
+        left: -30px;
+    }
+    .text-behind {
+        font-size: 50px;
+    }
+    #projects .text-behind {
+        top: -115px;
+    }
+    #articles .text-behind{
+        top: -85px;
+    }
+    #training .text-behind {
+        top: -135px;
+        width: 300px;
+    }
+    #contact {
+        padding: 40px;
+    }
+    #contact .text-behind {
+        top: 20px;
+    }
+}
+@media (max-width: 800px) {
+    .skills-1 {
+        transform: scale(0.5);
+    }
+    #projects {
+        width: 100%;
+        height: 160vh;
+        flex-direction: row;
+    }
+    #projects .images-projects {
+        width: 25%;
+    }
+    #projects .text-behind {
+        right: -50px;
+        top: -180px;
+    }
+    .column:first-child {
+        padding-top: 30px;
+        margin-right: 10px;
+    }
+    #platform-description{
+        display: none;
+    }
+    .container-sites .card {
+        padding: 10px 15px;
+        height: 170px;
+    }    
+}
+@media (max-width: 700px) {
+    section {
+        height: 700px;
+    }
+    .about-2 {
+        left: 50px;
+    }
+    .header {
+        padding: 10px 0px;
+    }
+    #about .text-behind {
+        top: 3%;
+    }
+    
+    #skills .text-behind {
+        left: -30px;
+        top: -165px;
+    }
+    #skills p {
+        font-size: 13px !important;
+        width: 300px;
+    }
+    #skills {
+        height: 530px;
+    }
+    #skills ul {
+        height: 220px;
+        width: 220px;
+    }
+    #skills ul li img{
+        width: 60px;
+    }
+    #projects .text-behind {
+        right: 0;
+    }
+    #projects p {
+        font-size: 13px !important;
+        width: 200px;
+    }
+    #projects .project {
+        margin-left: 35px;
+    }
+    #articles p {
+        font-size: 13px;
+        width: 300px;
+    }
+    #training p {
+        font-size: 13px;
+    }
+    #training .container-sites {
+        flex-direction: column;
+        margin-left: 10%;
+        height: 100%;
+    }
+    .column:last-child {
+        margin-top: 30px;
+        padding-bottom: 0;
+        margin-bottom: 30px;
+    }
+    #training .text-training {
+        height: 100%;
+    }
+    #contact p {
+        font-size: 13px;
+        width: 300px;
+    }
+    
+}
+@media (max-width: 640px) {
+    .header li{
+        font-size: 10px;
+    }
+    #home-page h1 {
+        font-size: 35px;
+    }
+    .profile {
+        height: 200px;
+        width: 200px;
+    }
+    .home-1 {
+        top: 155px;
+        left: 130px;
+    }
+    .home-3 {
+        top: 75px;
+        left: -70px;
+    }
+    .home-4{
+        top: 100px;
+        left: 155px;
+    }
+    .home-5 {
+        top: 5px;
+        left: 20px;
+    }
+    .resume-about {
+        height: 80%;
+        box-shadow: none;
+        margin-top: -50px;
+        border-radius: 0;
+    }
+    .text-about {
+        width: 100%;
+        padding: 0;
+    }
+    .list-about {
+        display: none;
+    }
+    #skills {
+        padding-top: 220px;
+    }
+    #projects .project {
+        margin-left: 60px;
+    }
+    .column {
+        height: 40%;
+    }
+    
+}
+@media (max-width: 500px) {
+    .project .image {
+        width: 110px;
+        height: 110px;
+    }
+    .project .image h1, ul, .description .github-link{
+        display: none;
+    }
+    .project .description {
+        padding: 0;
+    }
+    .project .open-tab {
+        display: flex;
+        width: 110px;
+        height: 100%;
+        border: none;
+        font-size: 10px;
+        font-weight: normal ;
+    }
+    .projects-1 {
+        transform: rotate(180deg) scale(0.7);
+        left: -30px;
+        bottom: 10px;
+    }
+    #training .container-sites {
+        margin-left: 2%;
+    }
+    .container-sites .card {
+        width: 170px;
+        padding-left: 15px;
+        transform: scale(0.8);
+    }
+    #contact .box-informations {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 410px) {
+    #home-page {
+        padding-left: 180px;
+    }
+    .resume-about {
+        height: 95%;
+    }
+}

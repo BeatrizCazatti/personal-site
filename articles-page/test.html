@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 1500px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        textarea{
+            margin-top: 10px;
+            font-size: 18px;
+            background-color: #f2f2f2;
+            height: 400px;
+            width: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="text-origin">
+        <textarea name="text-origin" id="text-origin" cols="50" rows="20"></textarea>
+    </div>
+    
+    <div>
+        <input type="button" value="Gerar HTML" onmouseup="convertTagsMDToHTML()">
+    </div>
+    <div id="text-html">
+        <textarea name="text-html" id="text-html" cols="50" rows="20"></textarea>
+    </div>
+    <div id="text-prewie">
+        <textarea name="text-prewie" id="text-prewie" cols="50" rows="20"></textarea>
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+        
+        /* function convertToHTML (){
+            var original = document.getElementsByTagName('textarea')[0]
+            var textOriginal = original.value
+            var textEdit = textOriginal
+            var html = document.getElementsByTagName('textarea')[1]
+            var textHTML = html.value
+            
+            textEdit = textEdit.replaceAll('<', '&lt;')
+            textEdit = textEdit.replaceAll('>', '&lt;')
+            textEdit = textEdit.replaceAll('\n', '\n<br>\n')
+            //indentação vvv
+            textEdit = textEdit.replaceAll('\n\n', '')
+            textEdit = textEdit.replaceAll('**', '<strong>')
+            textEdit = textEdit.replaceAll('*','<i>')
+            textEdit = textEdit.replaceAll('*','</i>')
+            textEdit = textEdit.replaceAll('```jsx', '<code>')
+            textEdit = textEdit.replaceAll('```html', '<code>')
+            textEdit = textEdit.replaceAll('```css', '<code>')
+            textEdit = textEdit.replaceAll('```', '</code>')
+            textEdit = textEdit.replaceAll('###', '<h3>')
+            textEdit = textEdit.replaceAll('##', '<h2>')
+            textEdit = textEdit.replaceAll('#', '<h1>')
+
+            textEdit = textEdit.replaceAll('- ', '<li>') */
+
+            
+
+            //o que eu quero procurar? sendo dois characters:
+            //var proxChar = textEdit.charAt(n)
+            //var proxProxChar = textEdit.charAt(n+1)
+            //a chave do charac tem dois caracteres: o primeiro e o segundo:
+                //<br> => < | b
+                    //firstChar = '<'
+                    //secondChar = 'b'
+                //![Untitled] => ! | [
+                    //firstChar = '!'
+                    //secondChar = '['
+            
+            //se for: <li> coloque: <li/> dps do <br>
+            //se for: <h3> coloque: <h3/> dps do <br>
+                //!//se for: ![ apague tudo até o ')' e coloque: '<!--<img src="">-->'
+                    //textEdit.indexOf('!')
+                    //procurar ')'
+                    //textEdit.replace(textEdit.slice(textEdit.indexOf('!'), textEdit.indexOf(n)), '<!--<img src="">-->')
+            //se for: <h3> coloque: <h3/> dps do <br>
+            
+            //fechar qual tag:
+                //li
+                //var tag = '<li>'
+                    //closeTagLi = '</li>'
+                //h1
+                    //closeTagH1 = '</h1>'
+                //h2
+                    //closeTagH2 = '</li>'
+                //h3
+                    //closeTagH3 = '</h3>'
+            /*
+            var firstCharSearch = ''
+            var secondCharSearch = ''
+            var search = ''
+            var closeTag = ''
+            
+            for (let x = 0; x <= 4; x++) {
+                switch (x) {
+                    case 0:
+                        //li
+                        search = '<li>'
+                        closeTag = '</li>'
+                        //fechar tag dps do <br>
+                        firstCharSearch = '<'
+                        secondCharSearch = 'b'
+                        break;
+                        
+                    case 1:
+                        //h1
+                        search = '<h1>'
+                        closeTag = '</h1>'
+                        //fechar tag dps do <br>
+                        firstCharSearch = '<'
+                        secondCharSearch = 'b'
+                        break;
+
+                    case 2:
+                        //h2
+                        search = '<h2>'
+                        closeTag = '</h2>'                        
+                        //fechar tag dps do <br>
+                        firstCharSearch = '<'
+                        secondCharSearch = 'b'
+                        break;
+                        
+                    case 3:
+                        //h3
+                        search = '<h3>'
+                        closeTag = '</h3>'                        
+                        //fechar tag dps do <br>
+                        firstCharSearch = '<'
+                        secondCharSearch = 'b'
+                        break;
+                    case 4:
+                        //![Untitled]
+                        search = '![Untitled]('
+                        closeTag = '<!--<img src="">-->'                        
+                        //fechar tag dps do )
+                        firstCharSearch = '!'
+                        secondCharSearch = '['
+                        break;
+
+                    default:
+                        alert('opsss no for')
+                        return
+                        break;
+                }
+                var n = ''
+                n = textEdit.indexOf(search) + 4
+                //n=< n+1=l||h n+2=i||1||2||3 n+3=> n+4=x
+                
+                while(textEdit.split(search).length-1 != textEdit.split(closeTag).length-1){
+                    
+                    while(textEdit.charAt(n) != firstCharSearch && textEdit.charAt(n+1) != secondCharSearch && n<textEdit.length){
+                        
+                        //exemplo: |<|s|trong>
+                        //exemplo2:| |b|rasileiro 
+                        //caso: |<|b|r>
+                        if (textEdit.charAt(n) == firstCharSearch && textEdit.charAt(n+1) != secondCharSearch){
+                            textEdit = `${textEdit.slice(0,n)}${closeTag}${textEdit.slice(n, textEdit.length)}`
+                            n=n+12
+                        }else if(textEdit.charAt(n) == firstCharSearch && textEdit.charAt(n+1) != secondCharSearch)
+                        n=n+1
+                        
+                    }
+                    if(n>textEdit.length){
+                        textEdit = textEdit.concat(closeTag)
+                        html.value = textEdit    
+                    }
+                    if(search == '![Untitled](' && textEdit.charAt(n) == firstCharSearch){
+                        //se for substituir ![Untitled](url) pela tag img e tiver achado o parentese final:
+                        var lastIndex = n
+                        while(textEdit.charAt(lastIndex) != ')'){
+                            lastIndex = lastIndex + 1
+                            if(lastIndex>textEdit.length){
+                                textEdit = textEdit.concat(closeTag)
+                                html.value = textEdit    
+                            }
+                        }
+                        if(textEdit.charAt(lastIndex) == ')'){
+                            textEdit = textEdit.replace(textEdit.slice(n,lastIndex+1), '<!--<img src="">-->')
+                        }
+
+                    }else if(textEdit.charAt(n) == firstCharSearch && textEdit.charAt(n+1) == secondCharSearch){
+                        textEdit = `${textEdit.slice(0,n)}${closeTag}${textEdit.slice(n, textEdit.length)}`
+                        n=n+12
+                    }
+                    n++
+                }
+
+                html.value = textEdit
+            }
+         }
+        */
+        //testes:
+            //aqui temos a tag de link <a><a/>
+            //**<head>** -> <strong>&lt;head&lt;<strong/>
+            //**ola** meu nome é **Beatriz**  -> <strong>ola<strong/> meu nome é <strong>Beatriz<strong/>
+            //- **Operação Restrita:** Também conhecida como **identidade**, ou seja, os operandos só vão retornar *true* caso sejam estritamente iguais. Por exemplo:
+            //aqui temos uma listinha:- bolo;- ervilha;- caju;- pudim.
+            
+            /*
+                //1 procurar o *
+                //verificar se o proximo caracter é:
+                    //um * -> strong
+                    //ou diferente d * -> italico
+                        //condição: ter outro antes de um espaço em branco ' '
+                        //ou seja: ele ira começar no proximo index do '*'(textEdit.charAt('*') + 1) e vai aumentando o index(n) n++ até achar um ' ' 
+            */
+        /*
+# **Operador módulo (%)**
+
+##Esse operador retorna o resto de uma divisão.
+
+###Exemplos:
+
+```jsx
+var resto1 = 15 % 4; // resultado: 3
+var resto2 = 3 % 1.2; // resultado: 0.6
+```
+Se você fizer a divisão, 3 / 1.2 dá 2.5, o que pode levar a acreditar que módulo deveria retornar 0.5. Então, em que momento o resto da divisão entre 3 % 1.2 foi 0.6? Vamos ver?
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/083e198d-5efa-47bc-8382-bf61f7caa831/Untitled.png)
+
+Usar o operador módulo com números de ponto flutuante requer um pouco mais de atenção.
+
+*/
+            
+        </script>
+</body>
+</html>
