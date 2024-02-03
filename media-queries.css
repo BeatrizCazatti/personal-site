@@ -323,13 +323,13 @@
         transform: scale(0.7);
     }
     #about {
-        height: 850px;
+        height: 700px;
     }
     .resume-about {
         height: 100%;
     }
     #about .text-behind {
-        top: 0;
+        top: 1%;
     }
     .text-behind {
         font-size: 40px;
@@ -361,3 +361,14 @@
         width: 250px;
     }
 }
+@media (max-width: 360px) {
+    #about {
+        height: 777px;
+    }
+}
+@media (max-width: 310px) {
+    #about {
+        height: 835px;
+    }
+}
+
