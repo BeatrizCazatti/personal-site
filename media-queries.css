@@ -342,4 +342,7 @@
         height: 130px;
         padding: 0 30px;
     }
+    #articles p {
+        width: 250px;
+    }
 }
