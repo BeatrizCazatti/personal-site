@@ -181,7 +181,7 @@
         width: 60px;
     }
     #projects .text-behind {
-        right: 0;
+        right: 10px;
     }
     #projects p {
         font-size: 13px !important;
@@ -305,10 +305,41 @@
 }
 
 @media (max-width: 410px) {
+    .header li{
+        font-size: 8px;
+    }
     #home-page {
-        padding-left: 180px;
+        padding-left: 185px;
+    }
+    #home-page h1 {
+        font-size: 30px;
+    }
+    #home-page .circle {
+        transform: scale(0.8);
     }
     .resume-about {
-        height: 95%;
+        height: 103%;
+    }
+    #about .text-behind {
+        top: 0;
+    }
+    .text-behind {
+        font-size: 40px;
+    }
+    #training .text-training {
+        width: 50%;
+    }
+    #skills .text-behind {
+        left: 0;
+        top: -130px;
+    }
+    #contact {
+        height: 450px;
+    }
+    #contact .box-informations {
+        background-color: transparent;
+        color: #F2F2F2;
+        height: 130px;
+        padding: 0 30px;
     }
 }
