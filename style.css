@@ -530,7 +530,7 @@ section p{
     font-size: 35px;
 }
 .text-projects .tag-circle{
-    right: 0;
+    right: 10px;
 }
 .text-projects p{
     color: var(--color-1);
