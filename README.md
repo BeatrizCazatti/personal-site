@@ -16,5 +16,5 @@ Link da página: https://portifolio-beatriz-cazatti.netlify.app/
 Criado por Beatriz Cazatti Figueiredo.
 
 ## Créditos:
-Foi utilizado o plugin jQuery [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/). E os ícones do [Font Awesome](https://fontawesome.com/).
+Foi utilizado o plugin jQuery [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/), ícones do [Font Awesome](https://fontawesome.com/) e avatar gerado pela [IA da Microsoft Bing].(https://www.bing.com/images/create)
 
